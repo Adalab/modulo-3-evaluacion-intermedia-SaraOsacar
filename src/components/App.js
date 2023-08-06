@@ -1,5 +1,7 @@
 import '../styles/App.scss';
 import { useEffect, useState } from 'react';
+import Logo from '../images/Friends.png';
+import Logosofa from '../images/SofaFriends.jpg';
 
 function App() {
   //declaro variables de estado
@@ -32,28 +34,41 @@ function App() {
     return allData
       .filter((eachQuote) => {
         if (filterCharacter === 'all') {
+          //me retorna que la condición dada sea verdadera
           return true;
-        } else if (eachQuote.character.includes(filterCharacter)) {
+        } else if (
+          eachQuote.character
+            .toLocaleLowerCase()
+            .includes(filterCharacter.toLocaleLowerCase())
+        ) {
           return true;
         }
+        return false;
       })
-      .filter((eachQuote) => eachQuote.quote.includes(searchQuote))
+      .filter((eachQuote) =>
+        eachQuote.quote
+          .toLocaleLowerCase()
+          .includes(searchQuote.toLocaleLowerCase())
+      )
       .map((eachQuote, index) => (
         <li key={index} className="li">
-          <p>Personaje: {eachQuote.character}</p>
-          <p>Frase: {eachQuote.quote}</p>
+          <p>
+            {eachQuote.character} : {eachQuote.quote}{' '}
+          </p>
         </li>
       ));
   };
 
   return (
     <div className="page">
-      <header>
-        <h1>Frases de Friends</h1>
+      <header className="header">
+        <div className="logo_box">
+          <img src={Logo} alt="Logo" className="header_logo" />
+        </div>
       </header>
 
       <main>
-        <form>
+        <form className="quote_box">
           <fieldset>
             <legend>Filtrar por frase</legend>
             <label htmlFor="quote">
@@ -87,9 +102,12 @@ function App() {
         </form>
 
         <section>
-          <ul className="ul">{renderList()}</ul>
+          <ul className="quote_list">{renderList()}</ul>
         </section>
       </main>
+      <footer className="footer">
+        <img src={Logosofa} alt="Sofa" className="footer_logo" />
+        </footer>
     </div>
   );
 }
