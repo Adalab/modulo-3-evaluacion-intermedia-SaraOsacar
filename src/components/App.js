@@ -68,8 +68,9 @@ function App() {
       </header>
 
       <main>
+        <h1 className="header_title">Frases de Friends</h1>
         <form className="quote_box">
-          <fieldset>
+          <fieldset className="phrase_box">
             <legend>Filtrar por frase</legend>
             <label htmlFor="quote">
               <input
@@ -81,7 +82,7 @@ function App() {
               />
             </label>
           </fieldset>
-          <fieldset>
+          <fieldset className="quote_box">
             <legend>Filtrar por personaje</legend>
             <label htmlFor="character">
               <select
@@ -107,7 +108,7 @@ function App() {
       </main>
       <footer className="footer">
         <img src={Logosofa} alt="Sofa" className="footer_logo" />
-        </footer>
+      </footer>
     </div>
   );
 }
