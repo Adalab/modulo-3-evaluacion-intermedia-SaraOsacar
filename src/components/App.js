@@ -71,7 +71,7 @@ function App() {
         <h1 className="header_title">Frases de Friends</h1>
         <form className="quote_box">
           <fieldset className="phrase_box">
-            <legend>Filtrar por frase</legend>
+            <legend className="phrase_filter">Filtrar por frase</legend>
             <label htmlFor="quote">
               <input
                 name="search"
@@ -83,8 +83,8 @@ function App() {
             </label>
           </fieldset>
           <fieldset className="quote_box">
-            <legend>Filtrar por personaje</legend>
-            <label htmlFor="character">
+            <legend className="quote_filter">Filtrar por personaje</legend>
+            <label htmlFor="character" className="select_character">
               <select
                 id="character"
                 onChange={handleFilterCharacter}
