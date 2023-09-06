@@ -25,8 +25,6 @@
     'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-size: 25px;
   transition: background-color 0.3s, color 0.3s;
-
-  
 }
 
 .header_title:hover {
@@ -73,5 +71,48 @@
   color: white;
 }
 .fieldset.phrase_box {
-    background-color: red;
+  background-color: red;
+}
+
+@media screen and (max-width: 468px) {
+  .header_title {
+    font-size: 18px;
+
+    padding: 10px;
+
+    margin-bottom: 30px;
+  }
+
+  .quote_box,
+  .phrase_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .quote_box fieldset,
+  .phrase_box fieldset {
+    margin-bottom: 10px;
+  }
+
+  .li {
+    width: 80%;
+
+    margin-bottom: 10px;
+  }
+
+  .logo_box {
+    justify-content: center;
+  }
+
+  .header_logo {
+    width: 100px;
+    height: auto;
+  }
+}
+.header_logo {
+  height: 20px;
 }
