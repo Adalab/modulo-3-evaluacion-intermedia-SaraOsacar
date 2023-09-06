@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "./static/css/main.d6277bf7.css",
+    "main.css": "./static/css/main.f9687fbe.css",
     "main.js": "./static/js/main.ea63ae03.js",
     "static/media/SofaFriends.jpg": "./static/media/SofaFriends.f70d971793b0d8cefecc.jpg",
     "index.html": "./index.html",
-    "main.d6277bf7.css.map": "./static/css/main.d6277bf7.css.map",
+    "main.f9687fbe.css.map": "./static/css/main.f9687fbe.css.map",
     "main.ea63ae03.js.map": "./static/js/main.ea63ae03.js.map"
   },
   "entrypoints": [
-    "static/css/main.d6277bf7.css",
+    "static/css/main.f9687fbe.css",
     "static/js/main.ea63ae03.js"
   ]
 }
